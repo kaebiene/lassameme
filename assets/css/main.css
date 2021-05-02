@@ -19,6 +19,7 @@ html {
   font-size: 16px;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  
 }
 
 body {
@@ -50,6 +51,9 @@ a:hover {
 
 img {
   max-width: 100%;
+}
+
+.site {
 }
 
 .clearfix::after {
@@ -1982,8 +1986,7 @@ h6, .h6 {
 .hero-section,
 .hero-section__wrap {
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden;}
 
 .hero-section .container,
 .hero-section__wrap .container {
