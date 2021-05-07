@@ -8,6 +8,8 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
 
         <!-- CSS -->
+        <link href="assets/css/jquery.mb.YTPlayer.min.css" rel="stylesheet">
+        <link href="assets/css/jquery.mb.vimeo_player.min.css" rel="stylesheet">
         <link href="assets/css/main.css" rel="stylesheet">
 
         <!-- JS -->
@@ -19,10 +21,11 @@
             <a class="skip-link sr-only" href="#main">Skip to content</a>
 
             <!-- Options headline effects: .rotate | .slide | .zoom | .push | .clip -->
-            <section class="hero-section hero-section--image clearfix clip">
+            <section class="hero-section hero-section--video clearfix rotate">
                 <div class="hero-section__wrap">
                     <div class="hero-section__option">
-                        <img src="https://unsplash.it/1920/1080" alt="Hero section image">
+                        <div data-video="youtube" id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/W26-Frspwi4',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1, showControls:false}">Video Youtube</div>
+                        <!--<div data-video="vimeo" class="player" data-property="{videoURL:'https://vimeo.com/90969239',containment:'body',autoPlay:true, mute:false, startAt:0, opacity:1}">Video Vimeo</div>-->
                     </div>
                     <!-- .hero-section__option -->
 
@@ -30,29 +33,58 @@
                         <div class="row">
                             <div class="offset-lg-2 col-lg-8">
                                 <div class="title-01 title-01--11 text-center">
-                                    <h2 class="title__heading">
-                                        <span>We are</span>
-                                        <strong class="hero-section__words">
-                                            <span class="title__effect is-visible">AweSplash</span>
-                                            <span class="title__effect">Creative</span>
-                                            <span class="title__effect">Free</span>
-                                        </strong>
-                                    </h2>
-                                    <div class="title__description">Ut vitae eros mollis, vulputate dolor ac luctus enim. Donec ornare eleifend pretium</div>
+                                    <!-- <h2 class="title__heading">We are AweSplash</h2>
+                                    <div class="title__description">Ut vitae eros mollis, vulputate dolor ac luctus enim. Donec ornare eleifend pretium</div> -->
+                                    <input type="image" id="image" alt="Volume" src="assets/images/Volume.svg" style="width: 10%;" onclick="jQuery('#bgndVideo').YTPToggleVolume()" >
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="assets/images/Title.svg" style="width: 40%;">
 
                                     <!-- Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary -->
-                                    <div class="title__action"><a href="#" class="btn btn-success">Get the template</a></div>
+                                    <!-- <div class="title__action"><a href="#" class="btn btn-success">Get the template</a></div> -->
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <img src="assets/images/EnterRoom.svg" style="width: 40%;">
+                                    <br>
+                                    <br>
+                                    <input type="image" id="image" onclick="window.location.href='https://drive.google.com/file/d/1XE2hMb4RVmXuMWR7H_b8eN_Rec5l18b1/view';" alt="Login" src="assets/images/PC.svg" style="width: 20%;" >
+                                    <input type="image" id="image" onclick="on()" alt="Login" src="assets/images/tutorial.svg" style="width: 20%;" >
+                                    <br>
+                                    <br>
+                                    <h4>A Project by Lassamie Prasimay</h4>
+                                    <!-- <input type="image" id="image" alt="Login" src="assets/images/Mac.svg" style="width: 20%;" > -->
                                 </div>
                                 <!-- .title-01 -->
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- .hero-section__wrap -->
             </section>
             <!-- .hero-section -->
         </div>
 
+        <div id="overlay">
+          <input type="image" id="image" onclick="off()" alt="Login" src="assets/images/tutorial.png" style="width: 20%; width: 30%; margin: auto; position: absolute; transform: translate(-50%,-50%); top: 50%; left: 50%;" >
+        </div>
+
+        <script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
         <!-- JS -->
+        <script src="assets/js/plugins/jquery.mb.YTPlayer.min.js"></script>
+        <script src="assets/js/plugins/jquery.mb.vimeo_player.min.js"></script>
         <script src="assets/js/plugins/animate-headline.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
